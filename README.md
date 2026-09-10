@@ -1,128 +1,119 @@
-# Stock Portfolio Tracker
+# 🐍 CodeAlpha Python Programming Internship
 
-A simple command-line Python application that calculates the total value of a user-defined stock portfolio using manually configured stock prices.
-
-Built as part of **CodeAlpha Python Programming Internship — Task 2**.
+This repository contains my project submissions for the **CodeAlpha Python Programming Internship**. Each task is implemented as a standalone, beginner-friendly Python script with clear scope, no external dependencies, and console-based input/output.
 
 ---
 
-##  Features
+## 📂 Repository Structure
 
--  Interactive CLI for entering stock names and quantities
--  Calculates per-stock and total investment value
--  Uses a hardcoded dictionary to simulate stock price data
--  Optional export of results to a `.txt` file
--  Input validation for unknown stocks and invalid quantities
-
----
-
-##  Key Concepts Used
-
-| Concept              | Usage in Project                                   |
-|-----------------------|----------------------------------------------------|
-| Dictionaries          | Storing stock prices and portfolio holdings         |
-| Input / Output        | Collecting user input, printing results             |
-| Basic Arithmetic       | Calculating per-stock value and total investment     |
-| File Handling (I/O)   | Saving the portfolio summary to a `.txt` file        |
-
----
-
-##  Getting Started
-
-### Prerequisites
-- Python 3.6 or higher
-
-### Installation
-```bash
-git clone <your-repo-url>
-cd stock-portfolio-tracker
+```
+codealpha-python-internship/
+├── stock_portfolio_tracker/
+│   ├── stock_tracker.py
+│   └── README.md
+├── hangman_game/
+│   ├── hangman.py
+│   └── README.md
+├── .gitignore
+└── README.md          # (this file)
 ```
 
-No external dependencies are required — the project uses only Python's standard library.
+> Each project folder also contains its own README with project-specific details, but this top-level README gives an overview of the full repo.
 
-### Running the Program
+---
+
+## 📋 Projects Overview
+
+| # | Project                  | Description                                                                 | Key Concepts                                              |
+|---|---------------------------|-------------------------------------------------------------------------------|-------------------------------------------------------------|
+| 1 | [Stock Portfolio Tracker](#-1-stock-portfolio-tracker) | Calculates total investment value from user-entered stocks and quantities.    | Dictionaries, Input/Output, Basic Arithmetic, File Handling  |
+| 2 | [Hangman Game](#-2-hangman-game)             | A classic word-guessing game with a limited number of incorrect attempts.      | `random`, `while` loops, `if-else`, Strings, Lists           |
+
+---
+
+## 📊 1. Stock Portfolio Tracker
+
+A command-line tool that tracks a simple stock portfolio using hardcoded stock prices, calculates the total investment value, and optionally saves the summary to a file.
+
+**Run it:**
 ```bash
+cd stock_portfolio_tracker
 python stock_tracker.py
 ```
 
----
+**Highlights:**
+- User inputs stock names and quantities
+- Prices are stored in a hardcoded dictionary (e.g. `{"AAPL": 180, "TSLA": 250}`)
+- Calculates and displays total investment value
+- Optionally exports results to a `.txt` file
 
-##  Usage
-
-1. Run the script.
-2. Enter a stock symbol (e.g., `AAPL`, `TSLA`) when prompted.
-3. Enter the quantity of shares you hold.
-4. Type `done` when you've finished entering stocks.
-5. View your portfolio summary and total investment value.
-6. Choose whether to save the results to a `.txt` file.
-
-### Example Session
-```
-=== Stock Portfolio Tracker ===
-
-Enter stock name and quantity (type 'done' to finish)
-Stock name: AAPL
-Quantity of AAPL: 10
-Stock name: TSLA
-Quantity of TSLA: 5
-Stock name: done
-
---- Portfolio Summary ---
-AAPL: 10 shares x $180 = $1800
-TSLA: 5 shares x $250 = $1250
-
-Total Investment Value: $3050
-
-Save results to a file? (y/n): y
-
-Portfolio saved to portfolio.txt
-```
+📄 See [`stock_portfolio_tracker/README.md`](./stock_portfolio_tracker/README.md) for full details, usage examples, and enhancement ideas.
 
 ---
 
-##  Supported Stocks
+## 🎮 2. Hangman Game
 
-Stock prices are hardcoded for demonstration purposes:
+A simple text-based Hangman game where the player guesses a hidden word one letter at a time, with a limited number of incorrect guesses allowed.
 
-| Symbol | Price ($) |
-|--------|-----------|
-| AAPL   | 180       |
-| TSLA   | 250       |
-| GOOGL  | 140       |
-| AMZN   | 145       |
-| MSFT   | 330       |
+**Run it:**
+```bash
+cd hangman_game
+python hangman.py
+```
 
->  To add more stocks, simply extend the `stock_prices` dictionary in the source code.
+**Highlights:**
+- Randomly selects a word from a predefined 5-word list
+- Limits players to 6 incorrect guesses
+- Tracks guessed letters and displays word progress
+- Supports replaying multiple rounds
+
+📄 See [`hangman_game/README.md`](./hangman_game/README.md) for full details, usage examples, and enhancement ideas.
 
 ---
 
-##  Project Structure
+## 🚀 Getting Started
 
+### Prerequisites
+- Python 3.6 or higher
+- No external libraries required — both projects use only the Python standard library
+
+### Clone the Repository
+```bash
+git clone <your-repo-url>
+cd codealpha-python-internship
 ```
-stock-portfolio-tracker/
-├── stock_tracker.py     # Main application script
-├── portfolio.txt        # Generated output file (created after running)
-├── .gitignore
-└── README.md            # Project documentation
+
+### Run Any Project
+Navigate into the relevant project folder and run its script:
+```bash
+cd stock_portfolio_tracker
+python stock_tracker.py
+```
+or
+```bash
+cd hangman_game
+python hangman.py
 ```
 
 ---
 
-##  Possible Enhancements
+## 🧠 Skills Demonstrated
 
-- [ ] Support `.csv` export in addition to `.txt`
-- [ ] Fetch live stock prices via an API (e.g., Alpha Vantage, Yahoo Finance)
-- [ ] Add a GUI using Tkinter or a web interface with Flask
-- [ ] Persist portfolio data across sessions using JSON
-
----
-
-##  License
-
-This project is created for educational purposes as part of the CodeAlpha internship program.
+Across both projects, this repository demonstrates:
+- Working with **dictionaries** and **lists** to store structured data
+- **Input validation** and handling user errors gracefully
+- **Control flow** with `while` loops and `if-else` conditionals
+- **File handling** (reading/writing `.txt` output)
+- Writing **clean, modular, well-documented** Python code with functions
 
 ---
 
-##  Acknowledgements
+## 📝 License
 
-Developed as part of **CodeAlpha's Python Programming Internship — Module 1, Task 2**.
+This repository is created for educational purposes as part of the CodeAlpha internship program.
+
+---
+
+## 🙌 Acknowledgements
+
+Developed as part of **CodeAlpha's Python Programming Internship — Module 1**.
